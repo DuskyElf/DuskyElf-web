@@ -2,13 +2,29 @@
 <html lang="en">
 
 <head>
-  <title>DuskyElf's Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/ayu-dark.css">
+  <script>
+
+  </script>
+  <!-- <link rel="stylesheet" href="/styles/drakula-dark.css"> -->
+  {{ partial "head-meta.html" . }}
 </head>
 
 <body>
-  <div class="container">
-    {{ block "main" . }} {{ end }}
-  </div>
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+
 </body>
 
 </html>

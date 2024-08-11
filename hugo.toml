@@ -1,3 +1,10 @@
 baseURL = 'https://duskyelf.pages.dev/'
 languageCode = 'en-us'
 title = "DuskyElf's website"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true

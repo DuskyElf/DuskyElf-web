@@ -1,0 +1,22 @@
+{{ define "main" }}
+<style>
+  .two-parts {
+    padding-top: 2rem;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-pic {
+    border-radius: 50%;
+  }
+</style>
+
+<div class="two-parts">
+  <img class="profile-pic" src="https://avatars.githubusercontent.com/u/91879372" alt="profile pic">
+  <div>
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
