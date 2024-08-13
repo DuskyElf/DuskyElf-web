@@ -21,6 +21,10 @@ body {
   padding: 2rem 3rem 1rem 3rem;
 }
 
+::selection {
+  background-color: var(--selection);
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -28,19 +32,72 @@ nav {
 }
 
 nav .name-logo {
-  font-size: 3rem;
+  font-size: 4rem;
+  text-decoration: none;
   font-family: "Yeseva One", serif;
+  text-shadow: 2px 2px var(--tertiary);
 }
 
 nav .menu {
   display: flex;
+  position: relative;
   align-items: center;
 }
 
 nav .menu .item {
   font-size: 1.5rem;
-  padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.icon {
+  fill: var(--foreground);
+}
+
+#theme-selector {
+  cursor: pointer;
+}
+
+#theme-menu {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid var(--foreground-muted);
+}
+
+#theme-selector:focus #theme-menu {
+  display: block;
+}
+
+#theme-menu .theme {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid var(--foreground);
+}
+
+.dot.foreground {
+  background-color: var(--foreground);
+}
+
+.dot.background {
+  background-color: var(--background);
+}
+
+.dot.secondary {
+  background-color: var(--secondary);
+}
+
+.dot.tertiary {
+  background-color: var(--tertiary);
 }
 
 main {
@@ -48,22 +105,10 @@ main {
   padding-top: 2rem;
 }
 
-.icon {
-  fill: var(--foreground);
-}
-
 a {
-  color: var(--blue);
+  color: var(--secondary);
 }
 
-select {
-  cursor: pointer;
-  appearance: none;
-  outline: none;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+strong {
+  color: var(--secondary);
 }
