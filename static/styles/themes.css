@@ -1,4 +1,25 @@
 :root {
+  --size-1: 1.61803rem;
+  --size-2: 3.23606rem;
+  --size-3: 4.85409rem;
+  --size-4: 6.47212rem;
+  --size-5: 8.09015rem;
+  --size-6: 9.70818rem;
+  --size-7: 11.3262rem;
+  --size-8: 12.9442rem;
+  --size-9: 14.5622rem;
+  --size-10: 16.1800rem;
+  --size-11: 17.7983rem;
+  --size-12: 19.4163rem;
+  --size-13: 21.0343rem;
+  --size-14: 22.6524rem;
+  --size-15: 24.2704rem;
+  --size-16: 25.8884rem;
+  --size-17: 27.5065rem;
+  --size-18: 29.1245rem;
+  --size-19: 30.7425rem;
+  --size-20: 32.3606rem;
+
   --selection: color-mix(in srgb, var(--tertiary), var(--background) 50%);
   --foreground-muted: color-mix(in srgb, var(--foreground), var(--background) 25%);
   --background-muted: color-mix(in srgb, var(--background), var(--foreground) 10%);

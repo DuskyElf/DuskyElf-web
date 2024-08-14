@@ -1,7 +1,7 @@
 {{ define "main" }}
 <style>
   .two-parts {
-    padding-top: 2rem;
+    padding-top: var(--size-1);
     display: flex;
     gap: 30px;
     align-items: center;
@@ -9,6 +9,8 @@
   }
 
   .profile-pic {
+    width: var(--size-19);
+    height: var(--size-19);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
   }

@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 2rem 3rem 1rem 3rem;
+  padding: var(--size-1) var(--size-2) 1rem var(--size-2);
 }
 
 ::selection {
@@ -33,7 +33,7 @@ nav {
 }
 
 .name-logo {
-  font-size: 4rem;
+  font-size: var(--size-3);
   text-decoration: none;
   font-family: "Yeseva One", serif;
   text-shadow: 2px 2px var(--tertiary), 2.5px 2.5px var(--tertiary);
@@ -51,8 +51,8 @@ nav ul {
 }
 
 nav ul>li {
-  font-size: 1.75rem;
-  padding-right: 2rem;
+  font-size: var(--size-1);
+  padding-right: var(--size-1);
 }
 
 nav ul>li>a {
@@ -71,7 +71,7 @@ nav ul>li>a:hover {
 #theme-selector {
   cursor: pointer;
   position: relative;
-  padding-right: 2rem;
+  padding-right: var(--size-1);
 }
 
 #theme-selector .icon {
@@ -87,7 +87,7 @@ nav ul>li>a:hover {
   display: none;
   position: absolute;
   top: 2rem;
-  left: 1.5rem;
+  left: var(--size-1);
   border-radius: 5px;
   border: 2px solid var(--foreground-muted);
 }
@@ -133,7 +133,7 @@ nav ul>li>a:hover {
 
 main {
   flex-grow: 1;
-  padding-top: 2rem;
+  padding-top: var(--size-1);
 }
 
 a {
@@ -147,6 +147,18 @@ a:hover {
 
 strong {
   color: var(--secondary);
+}
+
+h1 {
+  font-size: calc(var(--size-3) - 1rem);
+}
+
+h2 {
+  font-size: var(--size-2);
+}
+
+h3 {
+  font-size: var(--size-1);
 }
 
 img,
