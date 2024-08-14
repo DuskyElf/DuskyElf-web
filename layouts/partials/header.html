@@ -1,8 +1,8 @@
 <nav>
   <a href="{{ .Site.BaseURL | safeURL }}" class="name-logo">DuskyElf</a>
 
-  <div class="menu">
-    <div id="theme-selector" class="item" tabindex="1">
+  <div class="nav-right">
+    <div id="theme-selector" tabindex="1">
       <svg height="1.5rem" width="1.5rem" viewBox="0 0 512 512" xml:space="preserve">
         <g>
           <path class="icon" d="M446.53,4.85c-13.186-10.668-33.202-3.163-53.148,16.868c-18.109,17.776-112.788,112.51-161.468,170.404
@@ -28,41 +28,41 @@
       </div>
     </div>
 
-
-    <script>
-      const root = document.querySelector(":root");
-
-      let theme = undefined;
-      function showTheme({foreground, background, secondary, tertiary}) {
-        root.style.setProperty("--foreground", foreground);
-        root.style.setProperty("--background", background);
-        root.style.setProperty("--secondary", secondary);
-        root.style.setProperty("--tertiary", tertiary);
-      }
-
-      (() => {
-        const savedTheme = JSON.parse(localStorage.getItem("theme"));
-
-        if (savedTheme) {
-          theme = savedTheme;
-          showTheme(savedTheme);
-        } else {
-          let defaultTheme = {
-            "foreground": "#cdd6f4",
-            "background": "#11111b",
-            "secondary": "#ea76cb",
-            "tertiary": "#04a5e5"
-          };
-
-          theme = defaultTheme;
-          showTheme(defaultTheme);
-        }
-      })()
-    </script>
-
-    <script defer src="/scripts/theme-switcher.js"></script>
-
-    <div class="item">Blog</div>
-    <div class="item">Github</div>
+    <ul>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="https://github.com/duskyelf">Github</a></li>
+    </ul>
   </div>
 </nav>
+
+<script>
+  const root = document.querySelector(":root");
+
+  let theme = undefined;
+  function showTheme({foreground, background, secondary, tertiary}) {
+    root.style.setProperty("--foreground", foreground);
+    root.style.setProperty("--background", background);
+    root.style.setProperty("--secondary", secondary);
+    root.style.setProperty("--tertiary", tertiary);
+  }
+
+  (() => {
+    const savedTheme = JSON.parse(localStorage.getItem("theme"));
+
+    if (savedTheme) {
+      theme = savedTheme;
+      showTheme(savedTheme);
+    } else {
+      let defaultTheme = {
+        "foreground": "#cdd6f4",
+        "background": "#11111b",
+        "secondary": "#ea76cb",
+        "tertiary": "#04a5e5"
+      };
+
+      theme = defaultTheme;
+      showTheme(defaultTheme);
+    }
+  })()
+</script>
+<script defer src="/scripts/theme-switcher.js"></script>

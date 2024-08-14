@@ -1,5 +1,5 @@
 :root {
-  --selection: color-mix(in srgb, var(--secondary), var(--background) 50%);
-  --foreground-muted: color-mix(in srgb, var(--foreground), var(--background) 35%);
+  --selection: color-mix(in srgb, var(--tertiary), var(--background) 50%);
+  --foreground-muted: color-mix(in srgb, var(--foreground), var(--background) 25%);
   --background-muted: color-mix(in srgb, var(--background), var(--foreground) 10%);
 }
